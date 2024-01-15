@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { RootObject } from '../interfaces/interfaces';
 
 const jsonUrl = '../../assets/json';
 
@@ -23,7 +24,7 @@ export class LaligaapimockService {
   }
 
   getTeamInfo(){
-    return this.http.get(jsonUrl + '/TeamInfo.json');
+    return this.http.get<RootObject>(jsonUrl + '/TeamInfo.json');
   }
 
   getTeamPlayers(){

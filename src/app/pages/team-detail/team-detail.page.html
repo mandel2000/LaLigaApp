@@ -11,16 +11,20 @@
     <ion-icon name="arrow-back-sharp"></ion-icon>
   </ion-button>
   <ion-card>
-    <ion-img id="team-logo" [src]='teamInfo.team.logo'></ion-img>
+    <ion-img id="team-logo" [src]='teamInfo?.team?.logo'></ion-img>
     <ion-card-header>
       <ion-item lines="none">
-        <ion-card-title>{{teamInfo.team.name}}</ion-card-title>
-        <ion-button fill="clear">
-          <ion-icon name="star-outline"></ion-icon>
+        <ion-card-title>{{teamInfo?.team?.name}}</ion-card-title>
+        <ion-button fill="clear" (click)="onFavoriteClick()">
+
+          <ion-icon name="star-outline" *ngIf="!isFavorite() else fav"></ion-icon>
+          <ng-template #fav>
+            <ion-icon name="star-sharp"></ion-icon>
+          </ng-template>
         </ion-button>
       </ion-item>
       <ion-item lines="none">
-        <ion-card-subtitle>{{teamInfo.venue.city}}, {{teamInfo.team.country}}</ion-card-subtitle>
+        <ion-card-subtitle>{{teamInfo?.venue?.city}}, {{teamInfo?.team?.country}}</ion-card-subtitle>
       </ion-item>
     </ion-card-header>
     <ion-card-content>
