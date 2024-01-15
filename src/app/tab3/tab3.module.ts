@@ -7,6 +7,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { Tab3PageRoutingModule } from './tab3-routing.module';
 import { RouterModule } from '@angular/router';
+import { StandingsTableComponent } from '../components/standings-table/standings-table.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,6 @@ import { RouterModule } from '@angular/router';
     Tab3PageRoutingModule,
     RouterModule
   ],
-  declarations: [Tab3Page]
+  declarations: [Tab3Page, StandingsTableComponent]
 })
 export class Tab3PageModule {}

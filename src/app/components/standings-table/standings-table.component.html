@@ -1,0 +1,24 @@
+<ion-grid [fixed]="true">
+  <ion-row class="header"> 
+    <ion-col size="4">Club</ion-col>
+    <ion-col>PJ</ion-col>
+    <ion-col>V</ion-col>
+    <ion-col>E</ion-col>
+    <ion-col>D</ion-col>
+    <ion-col>GF</ion-col>
+    <ion-col>GC</ion-col>
+    <ion-col>DG</ion-col>
+    <ion-col>Pts</ion-col>
+  </ion-row>
+  <ion-row *ngFor="let stat of standings">
+    <ion-col size="4">{{stat.team.name}}</ion-col>
+    <ion-col>{{stat.all.played}}</ion-col>
+    <ion-col>{{stat.all.win}}</ion-col>
+    <ion-col>{{stat.all.draw}}</ion-col>
+    <ion-col>{{stat.all.lose}}</ion-col>
+    <ion-col>{{stat.all.goals.for}}</ion-col>
+    <ion-col>{{stat.all.goals.against}}</ion-col>
+    <ion-col>{{stat.goalsDiff}}</ion-col>
+    <ion-col>{{stat.points}}</ion-col>
+  </ion-row>
+</ion-grid>

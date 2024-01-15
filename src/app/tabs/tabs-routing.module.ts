@@ -16,8 +16,12 @@ const routes: Routes = [
         loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
       },
       {
-        path: 'favoritos',
+        path: 'clasificacion',
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+      },
+      {
+        path: 'equipo',
+        loadChildren: () => import('../pages/team-detail/team-detail.module').then(m => m.TeamDetailPageModule)
       },
       {
         path: '',

@@ -27,5 +27,9 @@ export class LaligaapiService {
     return this.http.get(apiUrl + '/teams/league/30', {headers : headers});
   }
 
+  getStandings(){
+    return this.http.get(apiUrl + '/leagueTable/30', {headers : headers});
+  }
+
 
 }

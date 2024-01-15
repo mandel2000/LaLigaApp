@@ -1,19 +1,7 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Equipos
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true" [scrollX]="false" class="ion-padding">
-  
   <ion-grid>
     <ion-row>
       <ion-col size="6" size-md="4" size-lg="3" *ngFor="let team of teams">
-        <app-team (redirect)="this.redirect.emit()" [team]='team' ></app-team>
+        <app-team (redirect)="this.redirect.emit()" [team]='team.team' ></app-team>
       </ion-col>
     </ion-row>
   </ion-grid>
-  
-</ion-content>

@@ -10,12 +10,12 @@ export class TeamListComponent  implements OnInit {
 
   @Output() redirect: EventEmitter<any> = new EventEmitter();
 
-  public teams = [];
+  public teams : any[] = [];
 
   constructor(private service : LaligaapimockService) { }
 
   ngOnInit() {
-    this.service.getLaLigaTeams().subscribe((response : any) => this.teams = response.api.teams);
+    this.service.getLaLigaTeams().subscribe((response : any) => this.teams = response.response);
   }
 
 }

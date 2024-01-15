@@ -1,17 +1,48 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Clasificacion
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <app-standings-table></app-standings-table>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button id="open-modal" expand="block">
+      <ion-icon name="help-sharp"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-modal #modal trigger="open-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Ayuda</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="modal.dismiss()">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+      <div class="block">
+        <h1><b>Ayuda</b></h1>
+        <p>Este es el significado de las cabeceras de las filas de la tabla:</p>
+        <ul>
+          <li><b>Club</b>: Nombre del club correspondiente.</li>
+          <li><b>PJ</b>: Partidos jugados.</li>
+          <li><b>V</b>: Victorias.</li>
+          <li><b>E</b>: Empates.</li>
+          <li><b>D</b>: Derrotas.</li>
+          <li><b>GF</b>: Goles a favor.</li>
+          <li><b>GC</b>: Goles en contra.</li>
+          <li><b>DG</b>: Diferencia de goles.</li>
+          <li><b>Pts</b>: Puntos.</li>
+        </ul>
+      </div>
+    </ion-content>
+  </ng-template>
+  </ion-modal>
+
 </ion-content>

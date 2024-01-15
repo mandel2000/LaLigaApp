@@ -13,4 +13,12 @@ export class LaligaapimockService {
   getLaLigaTeams(){
     return this.http.get(jsonUrl + '/LaLigaTeams.json');
   }
+
+  getStandings(){
+    return this.http.get(jsonUrl + '/LaLigaStandings.json');
+  }
+
+  getMatches(){
+    return this.http.get(jsonUrl + '/LaLigaMatches.json');
+  }
 }

@@ -1,0 +1,22 @@
+ion-row :first-child{
+    text-align: left; 
+    border-right: 1px solid black;
+
+}
+
+ion-col{
+    text-align: center; 
+}
+
+/* Esto seleccionará todas las filas (ion-row) dentro de ion-grid y les agregará un borde */
+ion-grid ion-row {
+    border-bottom: 1px solid black;
+}
+
+.header ion-col{
+    font-weight: 700;
+}
+
+ion-grid {
+    margin-top: 3%;
+}

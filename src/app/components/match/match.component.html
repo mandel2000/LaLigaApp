@@ -1,0 +1,23 @@
+<ion-grid>
+  <ion-row class="result">
+    <ion-col class="ion-align-self-end">
+      {{match.teams.home.name}} <ion-img alt="team logo" [src]="match.teams.home.logo"/>
+    </ion-col>
+    <ion-col size="auto" *ngIf="hasBeenPlayed(); else hour">
+      {{match.goals.home}}-{{match.goals.away}}
+    </ion-col>
+    <ng-template #hour>
+      <ion-col size="auto">
+        {{getTime()}}
+      </ion-col>
+    </ng-template>
+    <ion-col>
+      <ion-img alt="team logo" [src]="match.teams.away.logo"/> {{match.teams.away.name}} 
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      {{getDate()}}
+    </ion-col>
+  </ion-row>
+</ion-grid>

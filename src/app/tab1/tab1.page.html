@@ -1,1 +1,13 @@
-<app-team-list (redirect)="navigateToTeamPage()"></app-team-list>
+<ion-header [translucent]="true">
+<ion-toolbar>
+    <ion-title>
+    Equipos
+    </ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" [scrollX]="false" class="ion-padding">
+    <app-team-list (redirect)="navigateToTeamPage()"></app-team-list>
+</ion-content>
+
+<router-outlet></router-outlet>

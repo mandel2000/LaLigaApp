@@ -8,6 +8,7 @@ import { TeamListComponent } from '../pages/team-list/team-list.component';
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { TeamComponent } from '../components/team/team.component';
+import { TeamDetailPage } from '../pages/team-detail/team-detail.page';
 
 @NgModule({
   imports: [

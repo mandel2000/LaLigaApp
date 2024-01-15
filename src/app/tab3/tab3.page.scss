@@ -1,0 +1,29 @@
+ion-title{
+    text-transform: uppercase;
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ion-fab {
+    margin-bottom: 3%;
+    margin-right: 3%;
+}
+
+.block {
+width: 100%;
+height: 350px;
+align-items: center;
+justify-content: center;
+padding-left: 15px;
+}
+
+.block h1{
+    width: fit-content;
+    margin: auto;
+    margin-top: 20px;
+    padding: 0px;
+}
+
+ion-modal {
+--height: auto;
+}

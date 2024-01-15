@@ -1,0 +1,22 @@
+ion-img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.5em; 
+}
+ion-col{
+    font-size: 1.1em;
+}
+
+.result :first-child {
+    text-align: right;
+    
+}
+
+.result :last-child {
+    text-align: left;
+    
+}
+
+:last-of-type ion-row ion-col{
+    text-align: center;
+}
