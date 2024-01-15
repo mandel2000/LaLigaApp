@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LaligaapiService } from 'src/app/services/laligaapi.service';
+import { LaligaapimockService } from 'src/app/services/laligaapimock.service';
 
 @Component({
   selector: 'app-team-detail',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamDetailPage implements OnInit {
 
-  constructor() { }
+  public teamInfo : any;
+  public teamPlayers : any[] = [];
+
+  constructor(private service : LaligaapimockService) { }
 
   ngOnInit() {
+    this.service.getTeamInfo().subscribe((response:any)=> {this.teamInfo = response.response[0];});
+    this.service.getTeamPlayers().subscribe((response:any) => {this.teamPlayers = response.response});
   }
 
 }

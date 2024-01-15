@@ -10,17 +10,15 @@ ion-card-title {
     font-weight: bold;
 }
 
-/* Cuando el ancho de la pantalla es 768px o más */
 @media (min-width: 768px) {
 ion-card-title {
-    font-size: 1.5em; /* Tamaño de fuente más grande */
+    font-size: 1.5em;
 }
 }
 
-/* Cuando el ancho de la pantalla es 992px o más */
 @media (min-width: 992px) {
 ion-card-title {
-    font-size: 1.8em; /* Tamaño de fuente aún más grande */
+    font-size: 1.8em; 
 }
 }
   

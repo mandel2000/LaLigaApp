@@ -7,5 +7,32 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <h1>Team Name</h1>
+  <ion-button id="back" fill="clear">
+    <ion-icon name="arrow-back-sharp"></ion-icon>
+  </ion-button>
+  <ion-card>
+    <ion-img id="team-logo" [src]='teamInfo.team.logo'></ion-img>
+    <ion-card-header>
+      <ion-item lines="none">
+        <ion-card-title>{{teamInfo.team.name}}</ion-card-title>
+        <ion-button fill="clear">
+          <ion-icon name="star-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-card-subtitle>{{teamInfo.venue.city}}, {{teamInfo.team.country}}</ion-card-subtitle>
+      </ion-item>
+    </ion-card-header>
+    <ion-card-content>
+      <h1><b>Jugadores</b></h1>
+      <ion-list>
+        <ion-item *ngFor="let player of teamPlayers">
+          <ion-thumbnail slot="start">
+            <ion-img alt="Player photo" [src]="player.player.photo" />
+          </ion-thumbnail>
+          <ion-label>{{player.player.name}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
