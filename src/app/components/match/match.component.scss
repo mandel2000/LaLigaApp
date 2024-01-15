@@ -3,8 +3,11 @@ ion-img {
     vertical-align: middle;
     height: 1.5em; 
 }
+
 ion-col{
-    font-size: 1.1em;
+    font-size: .95em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
 }
 
 .result :first-child {
@@ -17,6 +20,9 @@ ion-col{
     
 }
 
-:last-of-type ion-row ion-col{
+.date {
     text-align: center;
+    font-weight: 200;
+    
+    color: grey;
 }

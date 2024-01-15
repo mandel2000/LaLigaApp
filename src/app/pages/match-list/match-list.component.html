@@ -1,3 +1,7 @@
-<div *ngFor="let match of matches">
-  <app-match [match]='match'></app-match>
-</div>
+<ion-list >
+  <div *ngFor="let match of matches">
+    <ion-item>
+      <app-match [match]='match'></app-match>
+    </ion-item>
+  </div>
+</ion-list>
