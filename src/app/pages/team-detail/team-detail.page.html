@@ -7,10 +7,11 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-button id="back" fill="clear">
-    <ion-icon name="arrow-back-sharp"></ion-icon>
-  </ion-button>
+  
   <ion-card>
+    <ion-button fill="clear">
+      <ion-back-button defaultHref="/laliga/equipos"></ion-back-button>
+    </ion-button>
     <ion-img id="team-logo" [src]='teamInfo?.team?.logo'></ion-img>
     <ion-card-header>
       <ion-item lines="none">
@@ -37,6 +38,9 @@
           <ion-label>{{player.player.name}}</ion-label>
         </ion-item>
       </ion-list>
+      <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)" [disabled]="dataFinished">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
     </ion-card-content>
   </ion-card>
 </ion-content>

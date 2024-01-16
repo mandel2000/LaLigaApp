@@ -42,6 +42,7 @@ export class FavoritesService {
     if(favs){
       this.favs = favs;
     }
+
   }
 
   async init() {

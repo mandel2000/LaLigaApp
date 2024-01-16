@@ -23,11 +23,11 @@ export class LaligaapimockService {
     return this.http.get(jsonUrl + '/LaLigaMatches.json');
   }
 
-  getTeamInfo(){
+  getTeamInfo(id : string | null){
     return this.http.get<RootObject>(jsonUrl + '/TeamInfo.json');
   }
 
-  getTeamPlayers(){
-    return this.http.get(jsonUrl + '/Players.json');
+  getTeamPlayers(id : string | null, page? : number){
+    return this.http.get(jsonUrl + '/Players' + (page?page:"") + '.json');
   }
 }

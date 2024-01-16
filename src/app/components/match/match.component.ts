@@ -12,7 +12,6 @@ export class MatchComponent  implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.match);
   }
 
   getDate(){

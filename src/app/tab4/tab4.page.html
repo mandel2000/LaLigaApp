@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Favoritos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" size-md="4" size-lg="3" *ngFor="let team of teams">
+        
+        <ion-card [button]="true" >
+          <ion-img alt="team logo" [src]="team.team.logo" />
+          <ion-card-header>
+            <ion-card-title>{{team.team.name}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

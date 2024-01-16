@@ -18,6 +18,8 @@ export class TeamComponent  implements OnInit {
 
   ngOnInit() {}
 
-  
+  getRouterPath(){
+    return "/laliga/equipos/equipo/" + this.team.id;
+  }
 
 }

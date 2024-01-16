@@ -1,4 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { SearchbarInputEventDetail } from '@ionic/angular';
+import { IonSearchbarCustomEvent } from '@ionic/core';
+import { LaligaapiService } from 'src/app/services/laligaapi.service';
 import { LaligaapimockService } from 'src/app/services/laligaapimock.service';
 
 @Component({
@@ -11,11 +14,23 @@ export class TeamListComponent  implements OnInit {
   @Output() redirect: EventEmitter<any> = new EventEmitter();
 
   public teams : any[] = [];
+  public allTeams = [];
 
   constructor(private service : LaligaapimockService) { }
 
   ngOnInit() {
-    this.service.getLaLigaTeams().subscribe((response : any) => this.teams = response.response);
+    this.service.getLaLigaTeams().subscribe((response : any) => {
+      this.allTeams = response.response;
+      this.teams = [...this.allTeams];
+    });
+  }
+
+  onSearch($event: IonSearchbarCustomEvent<SearchbarInputEventDetail>) {
+
+    const query = $event?.target?.value?.toLowerCase();
+
+    this.teams = this.allTeams.filter((team : any) => {return team.team.name.toLowerCase().includes(query);});
+
   }
 
 }

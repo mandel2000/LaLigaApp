@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import { TeamDetailPage } from '../pages/team-detail/team-detail.page';
 
 const routes: Routes = [
   {
@@ -9,7 +10,8 @@ const routes: Routes = [
     children: [
       {
         path: 'equipos',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
+        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule),
+        
       },
       {
         path: 'partidos',
@@ -20,7 +22,11 @@ const routes: Routes = [
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
       {
-        path: 'equipo',
+        path: 'favoritos',
+        loadChildren: () => import('../tab4/tab4.module').then(m => m.Tab4PageModule)
+      },
+      {
+        path: 'equipos/equipo/:id',
         loadChildren: () => import('../pages/team-detail/team-detail.module').then(m => m.TeamDetailPageModule)
       },
       {

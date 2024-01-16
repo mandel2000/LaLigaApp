@@ -2,15 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Tab1Page } from './tab1.page';
 import { TeamDetailPageModule } from '../pages/team-detail/team-detail.module';
+import { TeamDetailPage } from '../pages/team-detail/team-detail.page';
 
 const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
-    children: [{
-      path: 'equipo',
-      loadChildren: () => import('../pages/team-detail/team-detail.module').then(m => m.TeamDetailPageModule)
-    }]
 
   }
 ];

@@ -21,10 +21,8 @@ export class LaligaapiService {
 
   constructor(private http: HttpClient) { }
 
-  
-
   getLaLigaTeams(){
-    return this.http.get(apiUrl + '/teams/league/30', {headers : headers});
+    return this.http.get(apiUrl + '/teams?league=140&season=2023', {headers : headers});
   }
 
   getStandings(){
