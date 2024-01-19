@@ -6,14 +6,14 @@
     <ion-col size="auto">
       <ion-button id="open-modal" fill="outline" style="margin-right: 0px;">
         <ion-icon name="filter"></ion-icon>
-        <ion-label> Filtrar</ion-label>
+        <ion-label translate="COMMON.FILTER"></ion-label>
       </ion-button>
     </ion-col>
     <ion-col size="auto">
       <ion-item lines="none" style="margin-left:0px;" *ngIf="hasFilters">
         <ion-button color="light" (click)="onClearFilters()">
           <ion-icon name="close-circle-outline"></ion-icon>  
-          <ion-label> Limpiar filtros</ion-label>
+          <ion-label translate="COMMON.CLEAR_FILTER"></ion-label>
         </ion-button> 
       </ion-item>
   </ion-col>
@@ -25,17 +25,17 @@
     <ion-header>
       <ion-toolbar>
         <ion-buttons slot="start">
-          <ion-button (click)="cancel()">Cancelar</ion-button>
+          <ion-button (click)="cancel()" translate="COMMON.CANCEL"></ion-button>
         </ion-buttons>
-        <ion-title>Welcome</ion-title>
+        <ion-title translate="COMMON.FILTERS"></ion-title>
         <ion-buttons slot="end">
-          <ion-button (click)="applyFilter()" [strong]="true">Aplicar</ion-button>
+          <ion-button (click)="applyFilter()" [strong]="true" translate="COMMON.APPLY"></ion-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
       <ion-item>
-        <ion-label>Fecha:</ion-label>
+        <ion-label translate="COMMON.DATE"></ion-label>
         <ion-datetime-button datetime="datetime"></ion-datetime-button>
       </ion-item>
         <ion-modal [keepContentsMounted]="true">

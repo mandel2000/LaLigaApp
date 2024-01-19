@@ -8,6 +8,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { Tab2PageRoutingModule } from './tab2-routing.module';
 import { MatchComponent } from '../components/match/match.component';
 import { MatchListComponent } from '../pages/match-list/match-list.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { MatchListComponent } from '../pages/match-list/match-list.component';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab2PageRoutingModule
+    Tab2PageRoutingModule,
+    TranslateModule
   ],
   declarations: [Tab2Page, MatchComponent, MatchListComponent]
 })

@@ -9,6 +9,7 @@ import { TeamListComponent } from '../pages/team-list/team-list.component';
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { TeamComponent } from '../components/team/team.component';
 import { TeamDetailPage } from '../pages/team-detail/team-detail.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { TeamDetailPage } from '../pages/team-detail/team-detail.page';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    TranslateModule
   ],
   declarations: [Tab1Page, TeamListComponent, TeamComponent]
 })

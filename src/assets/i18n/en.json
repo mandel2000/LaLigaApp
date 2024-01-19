@@ -1,0 +1,40 @@
+{
+    "TABS" : {
+        "TEAMS":"Teams",
+        "FIXTURES" : "Fixtures",
+        "STANDINGS" : "Standings",
+        "FAVORITES" : "Favorites"
+    },
+
+    "COMMON" : {
+        "RESULTS_COUNT":"Showing {{value}} results.",
+        "FILTER" : "Filter",
+        "CLEAR_FILTER" : "Clear filter",
+        "CANCEL" : "Cancel",
+        "APPLY" : "Apply",
+        "FILTERS" : "Filters",
+        "DATE" : "Date: ",
+        "HELP" : "Help",
+        "CLOSE" : "Close",
+        "DELETE" : "Delete"
+
+    },
+
+    "STANDINGS" : {
+        "HELP" : {
+            "CONTENT": "<h1><b>Help</b></h1> <p>This are the table header's meanings:</p> <ul><li><b>Club</b>: Club name.</li> <li><b>GP</b>: Games played.</li> <li><b>W</b>: Wins.</li> <li><b>D</b>: Draws.</li> <li><b>L</b>: Loses.</li> <li><b>GF</b>: Goals for.</li> <li><b>GA</b>: Goals against.</li> <li><b>GD</b>: Goals diff.</li> <li><b>Pts</b>: Points.</li></ul>"
+        },
+
+        "TABLE" : {
+            "GP" : "GP",
+            "W" : "W",
+            "D" : "D",
+            "L" : "L",
+            "GF" : "GF",
+            "GA" : "GA",
+            "GD" : "GD",
+            "PTS" : "Pts"
+        }
+    }
+
+}

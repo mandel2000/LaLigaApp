@@ -1,0 +1,40 @@
+{
+    "TABS" : {
+        "TEAMS":"Equipos",
+        "FIXTURES" : "Partidos",
+        "STANDINGS" : "Clasificación",
+        "FAVORITES" : "Favoritos"
+    },
+
+    "COMMON" : {
+        "RESULTS_COUNT":"Mostrando {{value}} resultados.",
+        "FILTER" : "Filtrar",
+        "CLEAR_FILTER" : "Limpiar filtros",
+        "CANCEL" : "Cancelar",
+        "APPLY" : "Aplicar",
+        "FILTERS" : "Filtros",
+        "DATE" : "Fecha: ",
+        "HELP" : "Ayuda",
+        "CLOSE" : "Cerrar",
+        "DELETE" : "Eliminar"
+
+    },
+
+    "STANDINGS" : {
+        "HELP" : {
+            "CONTENT": "<h1><b>Ayuda</b></h1> <p>Este es el significado de las cabeceras de las filas de la tabla:</p> <ul><li><b>Club</b>: Nombre del club correspondiente.</li> <li><b>PJ</b>: Partidos jugados.</li> <li><b>V</b>: Victorias.</li> <li><b>E</b>: Empates.</li> <li><b>D</b>: Derrotas.</li> <li><b>GF</b>: Goles a favor.</li> <li><b>GC</b>: Goles en contra.</li> <li><b>DG</b>: Diferencia de goles.</li> <li><b>Pts</b>: Puntos.</li></ul>"
+        },
+
+        "TABLE" : {
+            "GP" : "PJ",
+            "W" : "V",
+            "D" : "E",
+            "L" : "D",
+            "GF" : "GF",
+            "GA" : "GC",
+            "GD" : "DG",
+            "PTS" : "Pts"
+        }
+    }
+
+}

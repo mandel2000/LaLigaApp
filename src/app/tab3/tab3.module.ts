@@ -8,6 +8,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { Tab3PageRoutingModule } from './tab3-routing.module';
 import { RouterModule } from '@angular/router';
 import { StandingsTableComponent } from '../components/standings-table/standings-table.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { StandingsTableComponent } from '../components/standings-table/standings
     FormsModule,
     ExploreContainerComponentModule,
     Tab3PageRoutingModule,
-    RouterModule
+    RouterModule,
+    TranslateModule
   ],
   declarations: [Tab3Page, StandingsTableComponent]
 })
