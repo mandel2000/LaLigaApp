@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuService } from '../services/menu.service';
 
 @Component({
   selector: 'app-tab1',
@@ -8,7 +9,11 @@ import { Router } from '@angular/router';
 })
 export class Tab1Page {
 
-  constructor(private router : Router) {}
 
+  constructor(private router : Router, private menu : MenuService) {}
+
+  openMenu() {
+    this.menu.openMenu();
+  }
 
 }

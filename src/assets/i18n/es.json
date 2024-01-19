@@ -1,4 +1,11 @@
 {
+    "MENU" : {
+        "TITLE" : "Menú",
+        "LANG" : "Idioma",
+        "SPANISH" : "Español",
+        "ENGLISH" : "Inglés"
+    },
+
     "TABS" : {
         "TEAMS":"Equipos",
         "FIXTURES" : "Partidos",

@@ -1,3 +1,33 @@
+<ion-menu side="start" menuId="first" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>{{'MENU.TITLE' | translate}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-grid >
+      <ion-row class="ion-align-items-center">
+        <ion-col size="auto">
+          <ion-label>{{'MENU.LANG' | translate}}: </ion-label>
+        </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col >
+          <ion-segment color="primary" [(ngModel)]="lang" (ionChange)="onLanguageChange($event)">
+            <ion-segment-button value="es">
+              <ion-label>🇪🇸 {{'MENU.SPANISH' | translate}}</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="en">
+              <ion-label>🇬🇧 {{'MENU.ENGLISH' | translate}}</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-menu>
+
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>
+ 

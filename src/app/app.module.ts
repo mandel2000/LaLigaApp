@@ -10,6 +10,7 @@ import {HttpClient, HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage-angular';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { FormsModule } from '@angular/forms';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -21,7 +22,8 @@ export function HttpLoaderFactory(http: HttpClient) {
       IonicModule.forRoot(), 
       AppRoutingModule, 
       RouterModule, 
-      HttpClientModule, 
+      HttpClientModule,
+      FormsModule, 
       IonicStorageModule.forRoot(), 
       TranslateModule.forRoot({
         loader: {
