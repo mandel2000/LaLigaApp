@@ -5,15 +5,20 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-searchbar show-clear-button="focus" (ionInput)="onSearch($event)"></ion-searchbar>
+  <ion-label>Mostrando {{teams.length}} resultados</ion-label>
   <ion-grid>
     <ion-row>
       <ion-col size="6" size-md="4" size-lg="3" *ngFor="let team of teams">
         
-        <ion-card [button]="true" >
+        <ion-card [button]="true" routerLink={{getRouterPath(team.team.id)}}>
           <ion-img alt="team logo" [src]="team.team.logo" />
           <ion-card-header>
             <ion-card-title>{{team.team.name}}</ion-card-title>
           </ion-card-header>
+          <ion-card-content>
+          <ion-button fill="clear" (click)="removeFavorite(team)">Eliminar</ion-button>
+          </ion-card-content>
         </ion-card>
 
       </ion-col>

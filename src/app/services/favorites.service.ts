@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
 import { TeamResponse } from '../interfaces/interfaces';
+import { ToastController } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class FavoritesService {
 
   favs : TeamResponse[] = [];
 
-  constructor(private storage : Storage) {
+  constructor(private storage : Storage, public toastController : ToastController) {
     this.init();
   }
 
@@ -22,7 +23,9 @@ export class FavoritesService {
     if(!exists){
       this.favs.unshift(team!);
       this.set('favs', this.favs);
+      this.presentToast('Equipo ' + team?.team.name + ' añadido a favoritos.');
     }
+
   }
 
   removeFromFavorites(team : TeamResponse | undefined){
@@ -30,6 +33,7 @@ export class FavoritesService {
     this.favs = this.favs.filter(teamFav => team?.team.id !== teamFav.team.id);
 
     this.set('favs', this.favs);
+    this.presentToast('Equipo ' + team?.team.name + ' eliminado de favoritos.');
   }
 
   isFavorite(team : TeamResponse | undefined){
@@ -45,13 +49,28 @@ export class FavoritesService {
 
   }
 
+  async presentToast(message: string){
+
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 1500,
+      position: 'bottom',
+      swipeGesture: "vertical",
+      color : "primary",
+      htmlAttributes : { "margin-bottom" : "30px"}
+    });
+
+    toast.present();
+  }
+
   async init() {
     const storage = await this.storage.create();
     this._storage = storage;
   }
 
-
   public set(key: string, value: any) {
     this._storage?.set(key, value);
   }
+
+
 }

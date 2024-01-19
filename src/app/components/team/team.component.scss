@@ -1,6 +1,14 @@
+ion-card{
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    min-height: 210px;
+}
+
 img {
     margin: auto;
     padding: 20px;
+    width: 90%;
 }
 
 ion-card-title {
@@ -20,6 +28,10 @@ ion-card-title {
 ion-card-title {
     font-size: 1.8em; 
 }
+}
+
+ion-card-title{
+    width: fit-content;
 }
   
 

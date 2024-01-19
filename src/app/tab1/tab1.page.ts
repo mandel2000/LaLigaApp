@@ -11,8 +11,4 @@ export class Tab1Page {
   constructor(private router : Router) {}
 
 
-  navigateToTeamPage(){
-    console.log('navigateToTeamPage');
-    this.router.navigate(["/laliga/equipos/equipo"]);
-  }
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { RootObject } from '../interfaces/interfaces';
+import { LoadingController } from '@ionic/angular';
 
 const jsonUrl = '../../assets/json';
 
@@ -9,7 +10,9 @@ const jsonUrl = '../../assets/json';
 })
 export class LaligaapimockService {
 
-  constructor(private http : HttpClient) { }
+  loading : any;
+
+  constructor(private http : HttpClient, private loadingCtrl: LoadingController) { }
 
   getLaLigaTeams(){
     return this.http.get(jsonUrl + '/LaLigaTeams.json');
@@ -29,5 +32,20 @@ export class LaligaapimockService {
 
   getTeamPlayers(id : string | null, page? : number){
     return this.http.get(jsonUrl + '/Players' + (page?page:"") + '.json');
+  }
+
+  async showLoading() {
+    
+    this.loading = await this.loadingCtrl.create({
+      message: '',
+    
+    });
+
+    await this.loading.present();
+  }
+
+  async hideLoading(){
+    await this.loading.dismiss();
+    
   }
 }

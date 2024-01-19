@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { SearchbarInputEventDetail } from '@ionic/angular';
+import { LoadingController, SearchbarInputEventDetail } from '@ionic/angular';
 import { IonSearchbarCustomEvent } from '@ionic/core';
 import { LaligaapiService } from 'src/app/services/laligaapi.service';
 import { LaligaapimockService } from 'src/app/services/laligaapimock.service';
@@ -11,15 +11,16 @@ import { LaligaapimockService } from 'src/app/services/laligaapimock.service';
 })
 export class TeamListComponent  implements OnInit {
 
-  @Output() redirect: EventEmitter<any> = new EventEmitter();
 
   public teams : any[] = [];
   public allTeams = [];
 
-  constructor(private service : LaligaapimockService) { }
+  constructor(private service : LaligaapimockService, private loadingCtrl : LoadingController) { }
 
   ngOnInit() {
+    
     this.service.getLaLigaTeams().subscribe((response : any) => {
+      
       this.allTeams = response.response;
       this.teams = [...this.allTeams];
     });
@@ -33,4 +34,5 @@ export class TeamListComponent  implements OnInit {
 
   }
 
+  
 }

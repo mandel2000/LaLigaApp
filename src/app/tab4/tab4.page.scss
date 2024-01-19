@@ -1,0 +1,36 @@
+ion-card{
+    padding-top:10px;
+}
+
+img {
+    margin: auto;
+    padding: 20px;
+}
+
+ion-card-title {
+    margin: auto;
+    font-size: 1em;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+ion-button{
+    width: 90%;
+    padding:0;
+}
+
+@media (min-width: 768px) {
+ion-card-title {
+    font-size: 1.5em;
+}
+}
+
+@media (min-width: 992px) {
+ion-card-title {
+    font-size: 1.8em; 
+}
+}
+
+ion-label{
+    margin-left: 1em;
+}

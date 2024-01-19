@@ -21,7 +21,7 @@ export class TeamDetailPage implements OnInit {
   id : string | null = null;
   dataFinished : boolean = false;
 
-  constructor(private service : LaligaapimockService, private favService : FavoritesService, public toastController : ToastController, private route: ActivatedRoute) { }
+  constructor(private service : LaligaapimockService, private favService : FavoritesService, private route: ActivatedRoute) { }
 
   ngOnInit() {
 
@@ -40,11 +40,9 @@ export class TeamDetailPage implements OnInit {
     if(this.isFavorite()){
 
       this.favService.removeFromFavorites(this.teamInfo);
-      this.presentToast("Equipo eliminado de favoritos.");
     }else{
       
       this.favService.saveInFavorites(this.teamInfo);
-      this.presentToast("Equipo guardado en favoritos.");
     }
   }
 
@@ -80,12 +78,5 @@ export class TeamDetailPage implements OnInit {
   }
     
 
-  async presentToast(message: string){
-
-    const toast = await this.toastController.create({
-      message: message,
-      duration: 3000,
-      position: 'bottom',
-    });
-  }
+  
 }
