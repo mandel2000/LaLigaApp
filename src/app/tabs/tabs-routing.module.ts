@@ -26,7 +26,7 @@ const routes: Routes = [
         loadChildren: () => import('../tab4/tab4.module').then(m => m.Tab4PageModule)
       },
       {
-        path: 'equipos/equipo/:id',
+        path: 'equipo/:id',
         loadChildren: () => import('../pages/team-detail/team-detail.module').then(m => m.TeamDetailPageModule)
       },
       {

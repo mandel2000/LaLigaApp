@@ -3,7 +3,7 @@ import { FavoritesService } from 'src/app/services/favorites.service';
 import { LaligaapiService } from 'src/app/services/laligaapi.service';
 import { LaligaapimockService } from 'src/app/services/laligaapimock.service';
 import { InfiniteScrollCustomEvent, ToastController } from '@ionic/angular';
-import { TeamResponse } from '../../interfaces/interfaces';
+import { TeamResponse } from '../../interfaces/interfacesTeams';
 import { IonInfiniteScrollCustomEvent } from '@ionic/core';
 import { ActivatedRoute } from '@angular/router';
 

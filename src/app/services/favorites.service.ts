@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
-import { TeamResponse } from '../interfaces/interfaces';
+import { TeamResponse } from '../interfaces/interfacesTeams';
 import { ToastController } from '@ionic/angular';
 
 @Injectable({

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TeamResponse } from '../interfaces/interfaces';
+import { TeamResponse } from '../interfaces/interfacesTeams';
 import { FavoritesService } from '../services/favorites.service';
 import { SearchbarInputEventDetail } from '@ionic/angular';
 import { IonSearchbarCustomEvent } from '@ionic/core';
@@ -40,7 +40,7 @@ export class Tab4Page implements OnInit {
   }
 
   getRouterPath(id: number) {
-    return "/laliga/equipos/equipo/" + id;
+    return "/laliga/equipo/" + id;
   }
     
 
