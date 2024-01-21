@@ -15,13 +15,6 @@
 
   <ion-modal #modal trigger="open-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
     <ng-template>
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="end">
-            <ion-button (click)="modal.dismiss()" translate="COMMON.CLOSE"></ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-      </ion-header>
         <div class="block" [innerHTML]="'STANDINGS.HELP.CONTENT' | translate"></div>
     </ng-template>
   </ion-modal>
