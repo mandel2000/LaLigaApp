@@ -17,15 +17,12 @@
     <ng-template>
       <ion-header>
         <ion-toolbar>
-          <ion-title translate="COMMON.HELP"></ion-title>
           <ion-buttons slot="end">
-            <ion-button (click)="modal.dismiss()" translate="COMMON.CLOSE">Close</ion-button>
+            <ion-button (click)="modal.dismiss()" translate="COMMON.CLOSE"></ion-button>
           </ion-buttons>
         </ion-toolbar>
       </ion-header>
-      <ion-content>
         <div class="block" [innerHTML]="'STANDINGS.HELP.CONTENT' | translate"></div>
-      </ion-content>
     </ng-template>
   </ion-modal>
 
