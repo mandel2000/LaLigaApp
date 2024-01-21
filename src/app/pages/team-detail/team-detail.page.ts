@@ -6,6 +6,7 @@ import { InfiniteScrollCustomEvent, ToastController } from '@ionic/angular';
 import { TeamResponse } from '../../interfaces/interfacesTeams';
 import { IonInfiniteScrollCustomEvent } from '@ionic/core';
 import { ActivatedRoute } from '@angular/router';
+import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-team-detail',
@@ -21,7 +22,7 @@ export class TeamDetailPage implements OnInit {
   id : string | null = null;
   dataFinished : boolean = false;
 
-  constructor(private service : LaligaapiService, private favService : FavoritesService, private route: ActivatedRoute) { }
+  constructor(private service : LaligaapiService, private favService : FavoritesService, private route: ActivatedRoute, private menu : MenuService) { }
 
   ngOnInit() {
 
@@ -35,6 +36,10 @@ export class TeamDetailPage implements OnInit {
       this.totalPages =  response.paging.total; 
       this.dataFinished = this.totalPages==1;
     });
+  }
+
+  openMenu() {
+    this.menu.openMenu();
   }
 
   onFavoriteClick() {

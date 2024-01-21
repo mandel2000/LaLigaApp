@@ -3,6 +3,7 @@ import { TeamResponse } from '../interfaces/interfacesTeams';
 import { FavoritesService } from '../services/favorites.service';
 import { SearchbarInputEventDetail } from '@ionic/angular';
 import { IonSearchbarCustomEvent } from '@ionic/core';
+import { MenuService } from '../services/menu.service';
 
 
 @Component({
@@ -15,7 +16,12 @@ export class Tab4Page implements OnInit {
 
   teams : TeamResponse[]  = [];
 
-  constructor(private favoritesService : FavoritesService) { }
+  constructor(private favoritesService : FavoritesService, private menu : MenuService) { }
+
+
+  openMenu() {
+    this.menu.openMenu();
+  }
 
   ngOnInit() {
     this.favoritesService.loadFavorites();
