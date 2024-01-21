@@ -21,14 +21,16 @@ export class TeamDetailPage implements OnInit {
   id : string | null = null;
   dataFinished : boolean = false;
 
-  constructor(private service : LaligaapimockService, private favService : FavoritesService, private route: ActivatedRoute) { }
+  constructor(private service : LaligaapiService, private favService : FavoritesService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+
+    this.currentPage = 1;
 
     this.id = this.route.snapshot.paramMap.get('id');
     this.service.getTeamInfo(this.id).subscribe((response:any)=> {this.teamInfo = response.response[0];});
     
-    this.service.getTeamPlayers(this.id).subscribe((response:any) => {
+    this.service.getTeamPlayers(this.id, this.currentPage).subscribe((response:any) => {
       this.teamPlayers = response.response; 
       this.totalPages =  response.paging.total; 
       this.dataFinished = this.totalPages==1;

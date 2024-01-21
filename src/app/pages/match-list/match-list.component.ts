@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DatetimeChangeEventDetail, IonModal } from '@ionic/angular';
 import { IonDatetimeCustomEvent, IonModalCustomEvent, IonSearchbarCustomEvent, OverlayEventDetail, SearchbarInputEventDetail } from '@ionic/core';
+import { LaligaapiService } from 'src/app/services/laligaapi.service';
 import { LaligaapimockService } from 'src/app/services/laligaapimock.service';
 
 @Component({
@@ -20,7 +21,7 @@ export class MatchListComponent  implements OnInit {
 
   @ViewChild(IonModal) modal: IonModal | undefined;
 
-  constructor(private service : LaligaapimockService) { }
+  constructor(private service : LaligaapiService) { }
 
   ngOnInit() {
 

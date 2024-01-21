@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { LaligaapiService } from 'src/app/services/laligaapi.service';
 import { LaligaapimockService } from 'src/app/services/laligaapimock.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class StandingsTableComponent  implements OnInit {
 
   public standings : any[] = [];
 
-  constructor(private service : LaligaapimockService) { }
+  constructor(private service : LaligaapiService) { }
 
   ngOnInit() {
 

@@ -15,7 +15,7 @@ export class TeamListComponent  implements OnInit {
   public teams : any[] = [];
   public allTeams = [];
 
-  constructor(private service : LaligaapimockService, private loadingCtrl : LoadingController) { }
+  constructor(private service : LaligaapiService, private loadingCtrl : LoadingController) { }
 
   ngOnInit() {
     
